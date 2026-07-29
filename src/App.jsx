@@ -1,14 +1,14 @@
-import LiveData from "./context/LiveDataContext";
+import LiveDataContext from "./context/LiveDataContext";
 import PriceDisplay from "./components/PriceDisplay";
 import AlertStatus from "./components/AlertStatus";
 
 function App() {
     return (
      <>
-        <LiveData>
+        <LiveDataContext>
             <PriceDisplay />
             <AlertStatus />
-        </LiveData>
+        </LiveDataContext>
      </>
     )
 }
