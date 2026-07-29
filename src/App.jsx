@@ -1,12 +1,16 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import heroImg from './assets/hero.png'
-// import './App.css'
+import LiveData from "./context/LiveDataContext";
+import PriceDisplay from "./components/PriceDisplay";
+import AlertStatus from "./components/AlertStatus";
 
-// function App() {
-//  return(
-  
-//  )
+function App() {
+    return (
+     <>
+        <LiveData>
+            <PriceDisplay />
+            <AlertStatus />
+        </LiveData>
+     </>
+    )
+}
 
-// export default App
+export default App
