@@ -1,16 +1,16 @@
-import LiveDataContext from "./context/LiveDataContext";
+import LiveData from "./context/LiveDataContext";
 import PriceDisplay from "./components/PriceDisplay";
 import AlertStatus from "./components/AlertStatus";
 
 function App() {
     return (
-     <>
-        <LiveDataContext>
+    <>
+        <LiveData>
             <PriceDisplay />
             <AlertStatus />
-        </LiveDataContext>
-     </>
-    )
+        </LiveData>
+        </>
+    );
 }
 
 export default App

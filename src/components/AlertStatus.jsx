@@ -6,7 +6,7 @@ function AlertStatus() {
 
  return (
     <>
-      <h2> {price < 100000 ? "Price is below $100,000" : "Price is above $100,000"} </h2>
+      <h2> {price < 100000 ? "WARNING! Price is below $100,000" : "GREAT! Price is above $100,000"} </h2>
     </>
  )
 }

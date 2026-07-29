@@ -4,28 +4,28 @@ const LiveDataContext = createContext();
 function LiveData({ children }) {
     const [price, setPrice] = useState();
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
+    const [error, setError] = useState();
 
-    function GetPrice() {
+    useEffect(() => {
+        function GetPrice() {
         fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
             .then(response => response.json())
-            .then(data => {
-                setPrice(data.bitcoin.usd);
+            .then(data => { setPrice(data.bitcoin.usd);
                 setLoading(false);
-                setError("")
+                setError()
             })
             .catch(() => {
                 setLoading(false);
                 setError("Failed to load the data")
-            });
+            })
     }
-    useEffect(() => {
-        GetPrice();
+    GetPrice();
         const timer = setInterval(() => {
             GetPrice()
         }, 10000)
-        return () => clearInterval(timer)
-    }, []);
+    return () => { 
+        clearInterval(timer)}
+    },[]);
 
     return (
       <>
