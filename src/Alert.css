@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bottom{
+    /* border: 2px solid red; */
+    background-color: purple;
+    height: 90px;
+    /* margin-top: 250px; */
+    margin-bottom: 50px;
+    align-content: center;
+}
+/* .top h2{
+    text-align: center;
+} */

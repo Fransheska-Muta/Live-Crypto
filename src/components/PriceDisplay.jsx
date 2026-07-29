@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { LiveDataContext } from '../context/LiveDataContext';
+import '../PriceDisplay.css'
 
 function PriceDisplay() {
     const {price, loading, error} = useContext(LiveDataContext);
@@ -11,6 +12,7 @@ function PriceDisplay() {
 
     return (
      <>
+     <div className="top">
         {loading ? ( <h2>Loading...</h2>) 
         : 
         error ? (
@@ -18,6 +20,7 @@ function PriceDisplay() {
         : (
             <h2>Bitcoin Price: ${price}</h2>)
         }
+      </div>
      </>
     )
 }
